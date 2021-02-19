@@ -1,2 +1,8 @@
 INSERT INTO burgers (burger_name, devoured)
-VALUE ("Accountant", 55000, 1);
+VALUE ("Cheeseburger", false);
+
+INSERT INTO burgers (burger_name, devoured)
+VALUE ("Big Mac", false);
+
+INSERT INTO burgers (burger_name, devoured)
+VALUE ("Juicy Lucy", false);
