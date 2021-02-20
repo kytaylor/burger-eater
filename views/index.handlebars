@@ -4,6 +4,14 @@
 
         {{#each burgers}}
             {{#unless devoured}}
+            <div class="row">
+                    <div class="col-6">
+                        <ul class="thisBurger">{{this.burger_name}}</ul>
+                    </div>
+                    <div class="col-6">
+                        <button id="{{this.id}}" class="btn btn-primary mb-2">Devour It!</button>
+                    </div>
+                </div>
             {{/unless}}
         {{/each}}
     </div>
@@ -11,11 +19,17 @@
     <div class="col-md-6">
         <h2>Eaten Burgers</h2>
         
-        <form class="form-inline">
+        {{#each burger}}
+            {{#if devoured}}
+                <ul class="devouredBurger">{{this.burger_name}}</ul>
+            {{/if}}
+        {{/each}}
+    </div>
+
+    <form class="form-inline">
             <div class="form-group mx-sm-3 mb-2">
                 <input type="text" class="form-control" id="burgerInput">
                 <button id="submitButton" class="btn btn-primary mb-2">Add Burger!</button>
             </div>
         </form>
-    </div>
 </div>
